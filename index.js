@@ -1,4 +1,4 @@
-import { extension_settings, saveSettingsDebounced } from "../../../extensions.js";
+import { extension_settings, saveSettingsDebounced } from "../../extensions.js";
 import { eventSource, event_types } from "../../../../script.js";
 
 const extensionName = "style-cloner";
@@ -7,7 +7,7 @@ const extensionFolderPath = `scripts/extensions/${extensionName}/`;
 // 기본 설정
 const defaultSettings = {
     apiKey: "",
-    model: "gemini-2.0-flash-exp",
+    model: "gemini-2.5-flash-image",
     referenceImageBase64: "",
     referenceImageMime: "",
     autoApply: true,
@@ -174,9 +174,8 @@ function createSettingsHtml() {
                 <div class="style-cloner-section">
                     <label>모델 선택</label>
                     <select id="style_cloner_model" class="text_pole">
-                        <option value="gemini-2.0-flash-exp" ${settings.model === 'gemini-2.0-flash-exp' ? 'selected' : ''}>Gemini 2.0 Flash (Experimental)</option>
-                        <option value="gemini-1.5-pro" ${settings.model === 'gemini-1.5-pro' ? 'selected' : ''}>Gemini 1.5 Pro</option>
-                        <option value="gemini-2.0-flash" ${settings.model === 'gemini-2.0-flash' ? 'selected' : ''}>Gemini 2.0 Flash</option>
+                        <option value="gemini-2.5-flash-image" ${settings.model === 'gemini-2.5-flash-image' ? 'selected' : ''}>Gemini 2.5 Flash Image (Nano Banana)</option>
+                        <option value="gemini-3-pro-image-preview" ${settings.model === 'gemini-3-pro-image-preview' ? 'selected' : ''}>Gemini 3 Pro Image (Nano Banana Pro)</option>
                     </select>
                 </div>
 
