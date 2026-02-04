@@ -1,8 +1,15 @@
-import { extension_settings, saveSettingsDebounced } from "../../extensions.js";
-import { eventSource, event_types } from "../../../../script.js";
+import { extension_settings, getContext } from "../../extensions.js";
 
 const extensionName = "style-cloner";
-const extensionFolderPath = `scripts/extensions/${extensionName}/`;
+const extensionFolderPath = `scripts/extensions/third-party/${extensionName}/`;
+
+// getContext에서 saveSettingsDebounced 가져오기
+function saveSettingsDebounced() {
+    const context = getContext();
+    if (context.saveSettingsDebounced) {
+        context.saveSettingsDebounced();
+    }
+}
 
 // 기본 설정
 const defaultSettings = {
