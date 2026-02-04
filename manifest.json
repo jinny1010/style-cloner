@@ -1,0 +1,9 @@
+{
+    "name": "Style Cloner",
+    "version": "1.0.0",
+    "author": "User & Gemini",
+    "description": "Extracts art style from an image using Google Gemini Vision and applies it to image generation prompts.",
+    "ids": ["style-cloner"],
+    "js": "index.js",
+    "css": "style.css"
+}
