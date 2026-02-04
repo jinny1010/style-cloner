@@ -1,15 +1,11 @@
-import { extension_settings, getContext } from "../../extensions.js";
+import { saveSettingsDebounced } from '../../../../script.js';
+import { extension_settings } from '../../../extensions.js';
 
 const extensionName = "style-cloner";
 const extensionFolderPath = `scripts/extensions/third-party/${extensionName}/`;
 
-// getContext에서 saveSettingsDebounced 가져오기
-function saveSettingsDebounced() {
-    const context = getContext();
-    if (context.saveSettingsDebounced) {
-        context.saveSettingsDebounced();
-    }
-}
+// SillyTavern context에서 함수들 가져오기
+const getContext = () => SillyTavern.getContext();
 
 // 기본 설정
 const defaultSettings = {
